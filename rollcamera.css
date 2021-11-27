@@ -41,6 +41,34 @@
     height: 25px;
 }
 
+.setpiece {
+    position: absolute;
+    border: 1px solid blue;
+    width: 70px;
+    height: 70px;
+}
+
+.setpiecestack1 { top: 19.6%; left: 39.9% }
+.setpiecestack2 { top: 19.6%; left: 50% }
+.set1 { top: 36%; left: 38.3% }
+.set2 { top: 36%; left: 42.6% }
+.set3 { top: 36%; left: 47.1% }
+.set4 { top: 36%; left: 51.5% }
+.set5 { top: 41.7%; left: 38.3% }
+.set6 { top: 41.7%; left: 42.6% }
+.set7 { top: 41.7%; left: 47.1% }
+.set8 { top: 41.7%; left: 51.5% }
+.set9 { top: 47.3%; left: 38.3% }
+.set10 { top: 47.3%; left: 42.6% }
+.set11 { top: 47.3%; left: 47.1% }
+.set12 { top: 47.3%; left: 51.5% }
+.set13 { top: 53%; left: 38.3% }
+.set14 { top: 53%; left: 42.6% }
+.set15 { top: 53%; left: 47.1% }
+.set16 { top: 53%; left: 51.5% }
+
+
+
 .dicebox-problem1 { top: 3.8%; left: 25.3%; }
 .dicebox-problem2 { top: 3.8%; left: 29.3%; }
 .dicebox-problem3 { top: 3.7%; left: 38.2%; }
@@ -65,9 +93,3 @@
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=30);   
 }
-
-
-
-
-
-

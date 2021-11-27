@@ -24,6 +24,27 @@
             <div id="dicebox-idea3" class="dicebox dicebox-idea3">&nbsp</div>
             <div id="dicebox-idea4" class="dicebox dicebox-idea4">&nbsp</div>
 
+            <!-- set piece stacks-->
+            <div id="setpiecestack1" class="setpiece setpiecestack1"></div>
+            <div id="setpiecestack2" class="setpiece setpiecestack2"></div>
+
+            <!-- set -->
+            <div id="set1" class="setpiece set1"></div>
+            <div id="set2" class="setpiece set2"></div>
+            <div id="set3" class="setpiece set3"></div>
+            <div id="set4" class="setpiece set4"></div>
+            <div id="set5" class="setpiece set5"></div>
+            <div id="set6" class="setpiece set6"></div>
+            <div id="set7" class="setpiece set7"></div>
+            <div id="set8" class="setpiece set8"></div>
+            <div id="set9" class="setpiece set9"></div>
+            <div id="set10" class="setpiece set10"></div>
+            <div id="set11" class="setpiece set11"></div>
+            <div id="set12" class="setpiece set12"></div>
+            <div id="set13" class="setpiece set13"></div>
+            <div id="set14" class="setpiece set14"></div>
+            <div id="set15" class="setpiece set15"></div>
+            <div id="set16" class="setpiece set16"></div>
         </div>
         <div id="ideas" class="idea-area">
             <div id="ideadiscard" class="idea">{IDEA_DISCARD}</div>
@@ -31,10 +52,6 @@
             <div id="ideatodo1" class="idea">{IDEA_TODO_1}</div>
             <div id="ideatodo2" class="idea">{IDEA_TODO_2}</div>
         </div>
-
-
-This is your game interface. You can edit this HTML in your ".tpl" file.
-
 
 <script type="text/javascript">
 

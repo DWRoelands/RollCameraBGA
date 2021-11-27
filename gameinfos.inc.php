@@ -13,36 +13,36 @@
 $gameinfos = array( 
 
 // Name of the game in English (will serve as the basis for translation) 
-'game_name' => "My Great Game",
+'game_name' => "Roll Camera",
 
 // Game designer (or game designers, separated by commas)
-'designer' => 'John Doe',       
+'designer' => 'Malachi Ray Rempen',       
 
 // Game artist (or game artists, separated by commas)
-'artist' => 'Jane Doe',         
+'artist' => 'Malachi Ray Rempen',         
 
 // Year of FIRST publication of this game. Can be negative.
-'year' => 2000,                 
+'year' => 2021,                 
 
 // Game publisher (use empty string if there is no publisher)
-'publisher' => 'My Publishing Company',                     
+'publisher' => 'Keen Bean Studio',                     
 
 // Url of game publisher website
-'publisher_website' => 'http://www.mypublishingcompany.com/',   
+'publisher_website' => 'https://www.keenbean.studio/rollcamera.html',   
 
 // Board Game Geek ID of the publisher
-'publisher_bgg_id' => 1234,
+'publisher_bgg_id' => 44842,
 
 // Board game geek ID of the game
 'bgg_id' => 298102,
 
 
 // Players configuration that can be played (ex: 2 to 4 players)
-'players' => array( 2,3,4 ),    
+'players' => array( 1,2,3,4 ),    
 
 // Suggest players to play with this number of players. Must be null if there is no such advice, or if there is only one possible player configuration.
 // NB: the automatic lobby will try first the lowest number of players if this is not specified. So you _have to_ specify this parameter if the lowest player number is not compatible with the default options.
-'suggest_player_number' => null,
+'suggest_player_number' => 4,
 
 // Discourage players to play with these numbers of players. Must be null if there is no such advice.
 'not_recommend_player_number' => null,
@@ -50,7 +50,7 @@ $gameinfos = array(
 
 
 // Estimated game duration, in minutes (used only for the launch, afterward the real duration is computed)
-'estimated_duration' => 30,           
+'estimated_duration' => 60,           
 
 // Time in second add to a player when "giveExtraTime" is called (speed profile = fast)
 'fast_additional_time' => 30,           
@@ -80,7 +80,7 @@ $gameinfos = array(
 'is_beta' => 1,                     
 
 // Is this game cooperative (all players wins together or loose together)
-'is_coop' => 0,
+'is_coop' => 1,
 
 // Language dependency. If false or not set, there is no language dependency. If true, all players at the table must speak the same language.
 // If an array of shortcode languages such as array( 1 => 'en', 2 => 'fr', 3 => 'it' ) then all players at the table must speak the same language, and this language must be one of the listed languages.
@@ -88,16 +88,16 @@ $gameinfos = array(
 'language_dependency' => false,
 
 // Complexity of the game, from 0 (extremely simple) to 5 (extremely complex)
-'complexity' => 3,    
+'complexity' => 2,    
 
 // Luck of the game, from 0 (absolutely no luck in this game) to 5 (totally luck driven)
-'luck' => 3,    
+'luck' => 2,    
 
 // Strategy of the game, from 0 (no strategy can be setup) to 5 (totally based on strategy)
 'strategy' => 3,    
 
 // Diplomacy of the game, from 0 (no interaction in this game) to 5 (totally based on interaction and discussion between players)
-'diplomacy' => 3,    
+'diplomacy' => 4,    
 
 // Colors attributed to players
 'player_colors' => array( "ff0000", "008000", "0000ff", "ffa500", "773300" ),
@@ -132,8 +132,7 @@ $gameinfos = array(
 // Each paragraph must be wrapped with totranslate() for translation and should not contain html (plain text without formatting).
 // A good length for this text is between 100 and 150 words (about 6 to 9 lines on a standard display)
 'presentation' => array(
-//    totranslate("This wonderful game is about geometric shapes!"),
-//    totranslate("It was awarded best triangle game of the year in 2005 and nominated for the Spiel des Jahres."),
+    totranslate("Roll and place dice cooperatively to produce a hit (or so-bad-it’s-good) movie.")
 //    ...
 ),
 
@@ -144,7 +143,7 @@ $gameinfos = array(
 //  http://en.doc.boardgamearena.com/Game_meta-information:_gameinfos.inc.php
 //  IMPORTANT: this list should be ORDERED, with the most important tag first.
 //  IMPORTANT: it is mandatory that the FIRST tag is 1, 2, 3 and 4 (= game category)
-'tags' => array( 2 ),
+'tags' => array( 3,12,201,203,211 ),
 
 
 //////// BGA SANDBOX ONLY PARAMETERS (DO NOT MODIFY)

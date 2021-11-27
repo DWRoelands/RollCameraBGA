@@ -62,6 +62,11 @@ function (dojo, declare) {
             // Setup game notifications to handle (see "setupNotifications" method below)
             this.setupNotifications();
 
+            /* this.addTooltipHtml('dicebox-problem1', _('A crew die can be placed here.', '')); */
+
+
+
+
             console.log( "Ending game setup" );
         },
        

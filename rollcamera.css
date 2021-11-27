@@ -12,18 +12,42 @@
 
 .problem-area {
     margin-bottom: 5px;
+    width: 800px;
 }
 
 .problem {
     float: left;
+    height: 120px;
+    width: 90px;
+    background-color: white;
+    opacity: .5;
+    margin-left: 13px;
 }
 
-.idea-area {
-    margin-top: 5px;
+.problemdeck {
+    margin-left: 10.7%;
+    background-color: white;
+    opacity: .5;
 }
 
 .idea {
     float: left;
+    height: 120px;
+    width: 90px;
+    background-color: white;
+    opacity: .5;
+    margin-left: 13px;
+}
+
+.idea-area {
+    margin-top: 5px;
+    width: 800px;
+}
+
+.ideadiscard {
+    margin-left: 23%;
+    background-color: white;
+    opacity: .5;
 }
 
 .card {
@@ -31,7 +55,8 @@
     border-style: solid;
     border-color: black;
     border-radius: 10px;   /* rounded corners */
-    width: 100px;
+    width: 90px;
+    height:140px;
 }
 
 .dicebox {

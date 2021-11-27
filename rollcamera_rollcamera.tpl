@@ -1,10 +1,10 @@
 {OVERALL_GAME_HEADER}
         <div id="problems" class="problem-area">
-            <div id="problemsdeck" class="problem">{PROBLEM_DECK}</div>
-            <div id="problem1" class="problem">{PROBLEM_1}</div>
-            <div id="problem2" class="problem">{PROBLEM_2}</div>
-            <div id="problem3" class="problem">{PROBLEM_3}</div>
-            <div id="problemdiscard" class="problem">{PROBLEM_DISCARD}</div>
+            <div id="problemdeck" class="problem problemdeck"></div>
+            <div id="problem1" class="problem"></div>
+            <div id="problem2" class="problem" style="margin-left:11px;"></div>
+            <div id="problem3" class="problem" style="margin-left:12px;"></div>
+            <div id="problemdiscard" class="problem"></div>
         </div>
         <div id="board" class="board-area shadow">
             <!-- dice boxes -->
@@ -45,13 +45,18 @@
             <div id="set14" class="setpiece set14"></div>
             <div id="set15" class="setpiece set15"></div>
             <div id="set16" class="setpiece set16"></div>
+
+
+
+
         </div>
         <div id="ideas" class="idea-area">
-            <div id="ideadiscard" class="idea">{IDEA_DISCARD}</div>
-            <div id="ideasdeck" class="idea">{IDEA_DECK}</div>
-            <div id="ideatodo1" class="idea">{IDEA_TODO_1}</div>
-            <div id="ideatodo2" class="idea">{IDEA_TODO_2}</div>
+            <div id="ideadiscard" class="idea ideadiscard"></div>
+            <div id="ideasdeck" class="idea" style="margin-left: 10px;"></div>
+            <div id="ideatodo1" class="idea" style="margin-left: 16px;"></div>
+            <div id="ideatodo2" class="idea" style="margin-left: 15px;"></div>
         </div>
+
 
 <script type="text/javascript">
 

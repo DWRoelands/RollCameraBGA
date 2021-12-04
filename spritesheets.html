@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <script lang="JavaScript">
+
+            function init() {
+                scenesfront();
+                scenesback();
+                problemsfront();
+                problemsback();
+                ideasfront();
+            }
+
+            function scenesfront() {
+                var html = '';
+                for (var r=1;r <= 5; r++ ) {
+                    for (var c=1; c<= 5; c++ ) {
+                        var elementId = 'r' + r + 'c' + c;
+                        console.log('elementid=' + elementId);
+                        var bgPositionTop = (r-1) * 96;
+                        var bgPositionLeft = (c-1) * 148;
+                        var style = 'background-position: top ' + bgPositionTop + 'px left ' + bgPositionLeft + 'px; float:left;'
+                        if (c == 1) {
+                            style = style + ' clear:left;'
+                        }
+
+                        html = html + '<div class="scenefront card shadow" style="' + style + '"><span></span></div>\n'
+                        console.log(html);
+                    }
+                }
+                document.getElementById('scenesfront').innerHTML = html;
+            }
+
+            function scenesback() {
+                var html = '';
+                for (var r=1;r <= 5; r++ ) {
+                    for (var c=1; c<= 5; c++ ) {
+                        var elementId = 'r' + r + 'c' + c;
+                        console.log('elementid=' + elementId);
+                        var bgPositionTop = (r-1) * 96;
+                        var bgPositionLeft = (c-1) * 148;
+                        var style = 'background-position: top ' + bgPositionTop + 'px left ' + bgPositionLeft + 'px; float:left;'
+                        if (c == 1) {
+                            style = style + ' clear:left;'
+                        }
+
+                        html = html + '<div class="sceneback card shadow" style="' + style + '"></div>\n'
+                        console.log(html);
+                    }
+                }
+                document.getElementById('scenesback').innerHTML = html;
+            }
+            
+            function problemsfront() {
+                var html = '';
+                for (var r=1;r <= 5; r++ ) {
+                    for (var c=1; c<= 7; c++ ) {
+                        var bgPositionTop = (r-1) * 210;
+                        var bgPositionLeft = (c-1) * 135;
+                        var style = 'background-position: top ' + bgPositionTop + 'px left ' + bgPositionLeft + 'px; float:left;'
+                        if (c == 1) {
+                            style = style + ' clear:left;'
+                        }
+
+                        html = html + '<div class="problemfront card shadow" style="' + style + '"></div>\n'
+                        console.log(html);
+                    }
+                }
+                document.getElementById('problemsfront').innerHTML = html;
+            }
+
+            function problemsback() {
+                var html = '';
+                for (var r=1;r <= 5; r++ ) {
+                    for (var c=1; c<= 7; c++ ) {
+                        var bgPositionTop = (r-1) * 210;
+                        var bgPositionLeft = (c-1) * 135;
+                        var style = 'background-position: top ' + bgPositionTop + 'px left ' + bgPositionLeft + 'px; float:left;'
+                        if (c == 1) {
+                            style = style + ' clear:left;'
+                        }
+
+                        html = html + '<div class="problemback card shadow" style="' + style + '"></div>\n'
+                        console.log(html);
+                    }
+                }
+                document.getElementById('problemsback').innerHTML = html;
+            }
+
+            function ideasfront() {
+                var html = '';
+                for (var r=1;r <= 5; r++ ) {
+                    for (var c=1; c<= 8; c++ ) {
+                        var bgPositionTop = (r-1) * 210;
+                        var bgPositionLeft = (c-1) * 135;
+                        var style = 'background-position: top ' + bgPositionTop + 'px left ' + bgPositionLeft + 'px; float:left;'
+                        if (c == 1) {
+                            style = style + ' clear:left;'
+                        }
+
+                        html = html + '<div class="ideafront card shadow" style="' + style + '"></div>\n'
+                        console.log(html);
+                    }
+                }
+                document.getElementById('ideasfront').innerHTML = html;
+            }
+
+
+
+        </script>
+        <style>
+            .shadow {
+                /* the following styles are for drop-shadow across multiple browsers */
+                -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+                -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+                -o-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+                filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=30);   
+            }
+
+            .card {
+                border-width: 1px;
+                border-style: solid;
+                border-color: black;
+                border-radius: 10px;   /* rounded corners */
+                margin: 10px;
+            }
+
+            .scenefront { height: 96px; width: 148px; background: url('img/scenes-front.png'); background-size: 500% 500%;}
+            .sceneback { height: 96px; width: 148px; background: url('img/scenes-back.png'); background-size: 500% 500%;}
+            .problemfront { height: 210px; width: 135px; background: url('img/problems-front.jpg'); background-size: 700% 500%;}
+            .problemback { height: 210px; width: 135px; background: url('img/problems-back.jpg'); background-size: 700% 500%;}
+            .ideafront { height: 210px; width: 135px; background: url('img/ideas-front.jpg'); background-size: 800% 500% }
+
+</style>
+    </head>
+    <body onload="init()">
+        <h2>Scenes-Front</h2>
+        <div id="scenesfront"></div>
+        <hr style="clear:left;">
+
+        <h2>Scenes-Back</h2>
+        <div id="scenesback"></div>
+        <hr style="clear:left;">
+
+        <h2>Problems-Front</h2>
+        <div id="problemsfront"></div>
+        <hr style="clear:left;">
+
+        <h2>Problems-Back</h2>
+        <div id="problemsback"></div>
+        <hr style="clear:left;">
+
+        <h2>Ideas-Front</h2>
+        <div id="ideasfront"></div>
+    </body>
+</html>

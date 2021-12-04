@@ -40,6 +40,18 @@ class RollCamera extends Table
             //    "my_second_game_variant" => 101,
             //      ...
         ) );        
+
+        $this->scenedeck = self::getNew( "module.common.deck" );
+        $this->scenedeck->init( "scene" );
+
+        $this->problemdeck = self::getNew( "module.common.deck" );
+        $this->problemdeck->init( "problem" );
+
+        $this->ideadeck = self::getNew( "module.common.deck" );
+        $this->ideadeck->init( "idea" );
+
+
+
 	}
 	
     protected function getGameName( )
@@ -77,7 +89,33 @@ class RollCamera extends Table
         self::reattributeColorsBasedOnPreferences( $players, $gameinfos['player_colors'] );
         self::reloadPlayersBasicInfos();
         
-        /************ Start the game initialization *****/
+        /* initialize game decks */
+        /* each deck gets its own object (and therefore its own table in the database */)
+        /* because each card is so unique in terms of game effects, all we store in the database are the IDs. */
+        /* The effects themselves are handled in code and not expressed in the DB */
+
+        /* initialize scenes deck */
+        $scenes = array ();
+        for ($scenenumber = 1; $scenenumber <= 5; $scenenumber++) {
+            $scenes [] = array ('type' => $scenenumber, 'nbr' => 1);
+        }
+        $this->scenedeck->createCards( $scenes, 'scenedeck' );
+
+        /* initialize problems deck */
+        $problems = array ();
+        for ($problemnumber = 1; $problemnumber <= 35; $problemnumber++) {
+            $problems [] = array ('type' => $problemnumber, 'nbr' => 1);
+        }
+        $this->problemdeck->createCards( $problems, 'problemdeck' );
+
+        /* initialize scenes deck */
+        $ideas = array ();
+        for ($ideanumber = 1; $ideanumber <= 40; $ideanumber++) {
+            $ideas [] = array ('type' => $ideanumber, 'nbr' => 1);
+        }
+        $this->ideadeck->createCards( $ideas, 'ideadeck' );
+
+
 
         // Init global values with their initial values
         //self::setGameStateInitialValue( 'my_first_global_variable', 0 );

@@ -1,5 +1,8 @@
 <HTML>
     <HEAD>
+        <script lang="javascript">
+            
+        </script>
         <STYLE>
             .board-area {
                 clear: both;
@@ -99,15 +102,15 @@
             .script1 { top: 13%; left: 4.2%; }
             .script2 { top: 24.4%; left: 4.2%; }
 
-            .scene { position: absolute; height: 96px; width: 148px; border: 1px solid blue; }
-            .scenedeck { top: 44.1%; left: 0.8%; }
-            .scene1 { top: 60.2%; left: 0.8%; }
-            .scene2 { top: 76.2%; left: 0.8%; }
-            .scene3 { top: 7.3%; left: 75%; }
-            .scene4 { top: 26.2%; left: 75%; }
-            .scene5 { top: 44.9%; left: 75%; }
-            .scene6 { top: 63.7%; left: 75%; }
-            .scene7 { top: 82.5%; left: 75%; }
+            .scene { position: absolute; height: 96px; width: 148px; background: url('img/scenes-front.png'); background-size: 500% 500%;}
+            .scenedeck { top: 44.1%; left: 0.6%; }
+            #scene1 { top: 60.2%; left: 0.7%; background-position: -148px 0px; }
+            #scene2 { top: 76.2%; left: 0.8%; }
+            #scene3 { top: 7.3%; left: 75%; }
+            #scene4 { top: 26.2%; left: 75%; }
+            #scene5 { top: 44.9%; left: 75%; }
+            #scene6 { top: 63.7%; left: 75%; }
+            #scene7 { top: 82.5%; left: 75%; }
 
             .quality { position: absolute; height:22px; width: 22px; border: 1px solid blue;}
             .quality1 { top: 91.3%; left: 94.7%; }
@@ -152,6 +155,14 @@
                 box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
                 filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=30);   
             }
+
+            #scenedeck {
+                background: url('img/scenes-front.png');
+                background-position: 0 0;
+                background-size: 500% 500%;
+            }
+
+
 
 
         </style>
@@ -209,14 +220,14 @@
             <div id="script2" class="script script2"></div>
 
             <!-- scenes -->
-            <div id="scenedeck" class="scene scenedeck"></div>
-            <div id="scene1" class="scene scene1"></div>
-            <div id="scene2" class="scene scene2"></div>
-            <div id="scene3" class="scene scene3"></div>
-            <div id="scene4" class="scene scene4"></div>
-            <div id="scene5" class="scene scene5"></div>
-            <div id="scene6" class="scene scene6"></div>
-            <div id="scene7" class="scene scene7"></div>
+            <div id="scenedeck" class="scene scenedeck card shadow"></div>
+            <div id="scene1" class="scene card shadow"></div>
+            <div id="scene2" class="scene card shadow"></div>
+            <div id="scene3" class="scene card shadow"></div>
+            <div id="scene4" class="scene card shadow"></div>
+            <div id="scene5" class="scene card shadow"></div>
+            <div id="scene6" class="scene card shadow"></div>
+            <div id="scene7" class="scene card shadow"></div>
 
             <!-- quality tracker -->
             <div id="quality1" class="quality quality1"></div>

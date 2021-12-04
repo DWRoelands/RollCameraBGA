@@ -18,13 +18,20 @@
 define([
     "dojo","dojo/_base/declare",
     "ebg/core/gamegui",
-    "ebg/counter"
+    "ebg/counter",
+    "ebg/stock"
 ],
 function (dojo, declare) {
     return declare("bgagame.rollcamera", ebg.core.gamegui, {
         constructor: function(){
             console.log('rollcamera constructor');
-              
+            this.sceneCardHeight = 96;
+            this.sceneCardWidth = 148;
+
+            
+
+
+
             // Here, you can init the global variables of your user interface
             // Example:
             // this.myGlobalValue = 0;
@@ -57,7 +64,13 @@ function (dojo, declare) {
             }
             
             // TODO: Set up your game interface here, according to "gamedatas"
-            
+            this.sceneDeck = new ebg.stock()
+            this.sceneDeck.create( this, $('scenedeck'), this.sceneCardWidth, this.sceneCardHeight );
+
+
+
+
+
  
             // Setup game notifications to handle (see "setupNotifications" method below)
             this.setupNotifications();

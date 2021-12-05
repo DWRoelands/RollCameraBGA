@@ -90,30 +90,40 @@ class RollCamera extends Table
         self::reloadPlayersBasicInfos();
         
         /* initialize game decks */
-        /* each deck gets its own object (and therefore its own table in the database */)
+        /* each deck gets its own object (and therefore its own table in the database */
         /* because each card is so unique in terms of game effects, all we store in the database are the IDs. */
         /* The effects themselves are handled in code and not expressed in the DB */
 
-        /* initialize scenes deck */
+        /* initialize scenes deck and deal three cards to their board spots */
         $scenes = array ();
-        for ($scenenumber = 1; $scenenumber <= 5; $scenenumber++) {
-            $scenes [] = array ('type' => $scenenumber, 'nbr' => 1);
+        for ($scenenumber = 1; $scenenumber <= 25; $scenenumber++) {
+            $scenes [] = array ('type' => $scenenumber, 'type_arg' => '0', 'nbr' => 1);
         }
         $this->scenedeck->createCards( $scenes, 'scenedeck' );
+        $this->scenedeck->shuffle('scenedeck');
+        $this->scenedeck->pickCardForLocation('scenedeck','storyboard1');
+        $this->scenedeck->pickCardForLocation('scenedeck','storyboard2');
+        $this->scenedeck->pickCardForLocation('scenedeck','storyboard3');
 
-        /* initialize problems deck */
-        $problems = array ();
-        for ($problemnumber = 1; $problemnumber <= 35; $problemnumber++) {
-            $problems [] = array ('type' => $problemnumber, 'nbr' => 1);
-        }
-        $this->problemdeck->createCards( $problems, 'problemdeck' );
+        // /* initialize problems deck */
+        // $problems = array ();
+        // for ($problemnumber = 1; $problemnumber <= 35; $problemnumber++) {
+        //     $problems [] = array ('type' => $problemnumber, 'nbr' => 1);
+        // }
+        // $this->problemdeck->createCards( $problems, 'problemdeck' );
+        // $this->problemdeck->shuffle('problemdeck');
 
-        /* initialize scenes deck */
-        $ideas = array ();
-        for ($ideanumber = 1; $ideanumber <= 40; $ideanumber++) {
-            $ideas [] = array ('type' => $ideanumber, 'nbr' => 1);
-        }
-        $this->ideadeck->createCards( $ideas, 'ideadeck' );
+        // /* initialize ideas deck */
+        // $ideas = array ();
+        // for ($ideanumber = 1; $ideanumber <= 40; $ideanumber++) {
+        //     $ideas [] = array ('type' => $ideanumber, 'nbr' => 1);
+        // }
+        // $this->ideadeck->createCards( $ideas, 'ideadeck' );
+        // $this->ideadeck->shuffle('ideadeck');
+
+
+
+
 
 
 
@@ -155,7 +165,13 @@ class RollCamera extends Table
         $result['players'] = self::getCollectionFromDb( $sql );
   
         // TODO: Gather all information about current game situation (visible by player $current_player_id).
-  
+
+        // put 3 scenes on the storyboard
+        // TODO: Put all scenes into a single "storyboard" location and send these cards as a single array
+        $result['storyboard1'] = array_values($this->scenedeck->getCardsInLocation('storyboard1'))[0];
+        $result['storyboard2'] = array_values($this->scenedeck->getCardsInLocation('storyboard2'))[0];
+        $result['storyboard3'] = array_values($this->scenedeck->getCardsInLocation('storyboard3'))[0];
+
         return $result;
     }
 

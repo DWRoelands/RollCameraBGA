@@ -64,13 +64,7 @@ function (dojo, declare) {
             }
             
             // TODO: Set up your game interface here, according to "gamedatas"
-            this.sceneDeck = new ebg.stock()
-            this.sceneDeck.create( this, $('scenedeck'), this.sceneCardWidth, this.sceneCardHeight );
-
-
-
-
-
+            this.displayStoryBoard();
  
             // Setup game notifications to handle (see "setupNotifications" method below)
             this.setupNotifications();
@@ -169,13 +163,22 @@ function (dojo, declare) {
         ///////////////////////////////////////////////////
         //// Utility methods
         
-        /*
-        
-            Here, you can defines some utility methods that you can use everywhere in your javascript
-            script.
-        
-        */
+        displayStoryBoard: function()
+        {
+            console.log("--displayStoryBoard--");
+            console.log(this.gamedatas.storyboard1.type)
+            console.log(this.gamedatas.storyboard2.type)
+            console.log(this.gamedatas.storyboard3.type)
 
+            dojo.removeClass("storyboard1");
+            dojo.addClass("storyboard1", "scenefront storyboardfront scenecard" + this.gamedatas.storyboard1.type);
+
+            dojo.removeClass("storyboard2");
+            dojo.addClass("storyboard2", "scenefront storyboardfront scenecard" + this.gamedatas.storyboard2.type);
+
+            dojo.removeClass("storyboard3");
+            dojo.addClass("storyboard3", "scenefront storyboardfront scenecard" + this.gamedatas.storyboard3.type);
+        },
 
         ///////////////////////////////////////////////////
         //// Player's action

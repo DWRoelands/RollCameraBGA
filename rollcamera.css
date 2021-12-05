@@ -10,6 +10,92 @@
     position: relative;
 }
 
+/* styles for scene elements */
+.scenefront { 
+    position: absolute; 
+    height: 96px; 
+    width: 148px; 
+    background: url('img/scenes-front.png'); 
+    background-size: 500% 500%; 
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    display: none;
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+    -o-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=30);   
+}
+
+.sceneback { 
+    position: absolute; 
+    height: 96px; 
+    width: 148px; 
+    background: url('img/scenes-back.png'); 
+    background-size: 500% 500%; 
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    display: none;
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+    -o-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=30);   
+}
+
+#storyboard1 { top: 44.1%; left: 0.8%; }
+#storyboard2 { top: 60.2%; left: 0.8%; }
+#storyboard3 { top: 76.2%; left: 0.8%; }
+#scene1 { top: 7.3%; left: 75%; }
+#scene2 { top: 26.2%; left: 75%; }
+#scene3 { top: 44.9%; left: 75%; }
+#scene4 { top: 63.7%; left: 75%; }
+#scene5 { top: 82.5%; left: 75%; }
+
+/* Yes, you look at these style definitions and you sneer.  I feel your judgment.  But the BGA framework does not allow you to dynamically
+   change the background-position property of an element in JavaScript.  So, we declare a bunch of styles and dynamically swap the classes
+   in and out of the appropriate elements.  This is how other BGA developers worked around this roadblock so don't @ me. */
+   .scenecard1 { display:block; background-position: top 0px left 0px; }
+   .scenecard2 { display:block; background-position: top 0px left 148px; }
+   .scenecard3 { display:block; background-position: top 0px left 296px; }
+   .scenecard4 { display:block; background-position: top 0px left 444px; }
+   .scenecard5 { display:block; background-position: top 0px left 592px; }
+   .scenecard6 { display:block; background-position: top 96px left 0px; }
+   .scenecard7 { display:block; background-position: top 96px left 148px; }
+   .scenecard8 { display:block; background-position: top 96px left 296px; }
+   .scenecard9 { display:block; background-position: top 96px left 444px; }
+   .scenecard10 { display:block; background-position: top 96px left 592px; }
+   .scenecard11 { display:block; background-position: top 192px left 0px; }
+   .scenecard12 { display:block; background-position: top 192px left 148px; }
+   .scenecard13 { display:block; background-position: top 192px left 296px; }
+   .scenecard14 { display:block; background-position: top 192px left 444px; }
+   .scenecard15 { display:block; background-position: top 192px left 592px; }
+   .scenecard16 { display:block; background-position: top 288px left 0px; }
+   .scenecard17 { display:block; background-position: top 288px left 148px; }
+   .scenecard18 { display:block; background-position: top 288px left 296px; }
+   .scenecard19 { display:block; background-position: top 288px left 444px; }
+   .scenecard20 { display:block; background-position: top 288px left 592px; }
+   .scenecard21 { display:block; background-position: top 384px left 0px; }
+   .scenecard22 { display:block; background-position: top 384px left 148px; }
+   .scenecard23 { display:block; background-position: top 384px left 296px; }
+   .scenecard24 { display:block; background-position: top 384px left 444px; }
+   .scenecard25 { display:block; background-position: top 384px left 592px; }
+   
+   
+   
+   
+
+
+
+
+
+
+
+
 .problem-area {
     margin-bottom: 5px;
     width: 800px;
@@ -29,6 +115,12 @@
     background-color: white;
     opacity: .5;
 }
+
+
+
+
+
+
 
 .idea {
     float: left;
@@ -96,16 +188,6 @@
 .script1 { top: 13%; left: 4.2%; }
 .script2 { top: 24.4%; left: 4.2%; }
 
-.scene { position: absolute; height: 96px; width: 148px; border: 1px solid blue; }
-.scenedeck { top: 44.1%; left: 0.8%; }
-.scene1 { top: 60.2%; left: 0.8%; }
-.scene2 { top: 76.2%; left: 0.8%; }
-.scene3 { top: 7.3%; left: 75%; }
-.scene4 { top: 26.2%; left: 75%; }
-.scene5 { top: 44.9%; left: 75%; }
-.scene6 { top: 63.7%; left: 75%; }
-.scene7 { top: 82.5%; left: 75%; }
-
 .quality { position: absolute; height:22px; width: 22px; border: 1px solid blue;}
 .quality1 { top: 91.3%; left: 94.7%; }
 .quality2 { top: 84.6%; left: 94.7%; }
@@ -149,3 +231,8 @@
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.4);
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=30);   
 }
+
+
+.scenecard1 
+
+

@@ -50,15 +50,17 @@
         <div id="script1" class="script script1"></div>
         <div id="script2" class="script script2"></div>
 
-        <!-- scenes -->
-        <div id="scenedeck" class="scene scenedeck"></div>
-        <div id="scene1" class="scene scene1"></div>
-        <div id="scene2" class="scene scene2"></div>
-        <div id="scene3" class="scene scene3"></div>
-        <div id="scene4" class="scene scene4"></div>
-        <div id="scene5" class="scene scene5"></div>
-        <div id="scene6" class="scene scene6"></div>
-        <div id="scene7" class="scene scene7"></div>
+        <!-- storyboard -->
+        <div id="storyboard1" class="scenefront"></div>
+        <div id="storyboard2" class="scenefront"></div>
+        <div id="storyboard3" class="scenefront"></div>
+
+        <!--- scenes -->
+        <div id="scene1" class="scene scene3"></div>
+        <div id="scene2" class="scene scene4"></div>
+        <div id="scene3" class="scene scene5"></div>
+        <div id="scene4" class="scene scene6"></div>
+        <div id="scene5" class="scene scene7"></div>
 
         <!-- quality tracker -->
         <div id="quality1" class="quality quality1"></div>
